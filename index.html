@@ -1,80 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Nilphamari</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
     <style>
         body {
-            text-align: center;
-            font-family: Arial;
-            background-color: blue;
-            color: white;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 100%;
         }
 
         h1 {
-            color: yellow;
+            text-align: center;
+            color: #0077b6;
+            margin-bottom: 20px;
         }
 
-        .box {
-            padding: 15px;
-            margin: 10px;
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
             font-weight: bold;
-            border-radius: 8px;
+            color: #023e8a;
         }
 
-        .video { background-color: red; }
-        .audio { background-color: green; }
-        .pictures { background-color: purple; }
-        .blogs { background-color: orange; }
-        .books { background-color: brown; }
-        .notes { background-color: teal; }
-        .study { background-color: darkred; }
+        input, select, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
 
-        a {
+        input:focus, select:focus, textarea:focus {
+            border-color: #0077b6;
+            outline: none;
+        }
+
+        button {
+            background-color: #0077b6;
             color: white;
-            text-decoration: none;
-            display: block;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            background-color: black;
+        button:hover {
+            background-color: #023e8a;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to my site</h1>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter student name" required>
 
-    <div class="box video"><a href="video.html">Video</a></div>
-    <div class="box audio"><a href="audio.html">Audio</a></div>
-    <div class="box pictures"><a href="pictures.html">Pictures</a></div>
-    <div class="box blogs"><a href="blogs.html">Blogs</a></div>
-    <div class="box books"><a href="books.html">Books</a></div>
-    <div class="box notes"><a href="notes.html">Notes</a></div>
-    <div class="box study"><a href="study.html">Study Materials</a></div>
+            <label for="father">Father's Name:</label>
+            <input type="text" id="father" name="father" placeholder="Enter father's name" required>
 
-    <footer>
-        <p>Contact us | 
-        <a href="https://facebook.com" target="_blank">Visit us on FB</a></p>
-        <p>Arafat Zaman</p>
-    </footer>
+            <label for="mother">Mother's Name:</label>
+            <input type="text" id="mother" name="mother" placeholder="Enter mother's name" required>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Video Page</title>
-</head>
-<body style="background-color: lightblue; text-align: center;">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
 
-    <h1>My Video</h1>
+            <label for="religion">Religion:</label>
+            <select id="religion" name="religion" required>
+                <option value="">Select Religion</option>
+                <option value="Islam">Islam</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Christian">Christian</option>
+                <option value="Buddhist">Buddhist</option>
+                <option value="Other">Other</option>
+            </select>
 
-    <video width="500" controls>
-        <source src="videos/myvideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+            <label for="school">School Name:</label>
+            <input type="text" id="school" name="school" placeholder="Enter school name" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter student contact number" required>
+
+            <label for="fathercontact">Father's Contact Number:</label>
+            <input type="tel" id="fathercontact" name="fathercontact" placeholder="Enter father's contact number" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
 
 </body>
 </html>
